@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Critérios de Aceitação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f0f2f5;
+        }
+        h1 {
+            background: #004080;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #004080;
+        }
+        .bloco {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 6px solid #004080;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        a {
+            color: #004080;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Critérios de Aceitação</h1>
+
+<p>Clique abaixo para acessar rapidamente cada requisito:</p>
+
+<ul>
+    <li><a href="#rf01">RF01 - Acervo</a></li>
+    <li><a href="#rf02">RF02 - Login</a></li>
+    <li><a href="#rf03">RF03 - Reservas e Devoluções</a></li>
+    <li><a href="#rf04">RF04 - Notificações</a></li>
+    <li><a href="#rf05">RF05 - Estado e Devolução</a></li>
+    <li><a href="#rnf01">RNF01 - Aplicativo Móvel</a></li>
+    <li><a href="#rnf02">RNF02 - Web</a></li>
+    <li><a href="#rnf03">RNF03 - Segurança</a></li>
+    <li><a href="#rnf04">RNF04 - Disponibilidade</a></li>
+</ul>
+
+<!-- RF01 -->
+<div class="bloco" id="rf01">
+    <h2>RF01: Acervo (Físico e Online)</h2>
+    <ul>
+        <li>Validar que o acervo de livro físico e online esteja sempre disponível.</li>
+        <li>Permitir que o usuário possa acessar informações sobre qualquer livro.</li>
+        <li>Permitir que cada livro tenha avaliações dos usuários.</li>
+        <li>Validar o estado de cada livro físico no acervo para próximos usos.</li>
+        <li>Avisar caso o livro físico não esteja disponível no momento.</li>
+    </ul>
+</div>
+
+<!-- RF02 -->
+<div class="bloco" id="rf02">
+    <h2>RF02: Login</h2>
+    <ul>
+        <li>Validar que o e-mail informado corresponde a um usuário cadastrado no sistema.</li>
+        <li>Validar se a senha informada corresponde à senha cadastrada para aquele e-mail.</li>
+        <li>Exibir mensagem clara caso e-mail ou senha estejam incorretos: <strong>"E-mail ou senha incorretos. Tente novamente"</strong>.</li>
+    </ul>
+</div>
+
+<!-- RF03 -->
+<div class="bloco" id="rf03">
+    <h2>RF03: Reservas e Devoluções</h2>
+    <ul>
+        <li>Validar todas as reservas de livros da mais recente para a mais antiga.</li>
+        <li>Validar todas as devoluções.</li>
+        <li>Avisar ao usuário quando o livro físico não estiver disponível.</li>
+        <li>Registrar qual devolução está mais próxima e qual está mais distante.</li>
+        <li>Registrar por quantos dias o aluno irá reservar o livro e quando devolverá.</li>
+    </ul>
+</div>
+
+<!-- RF04 -->
+<div class="bloco" id="rf04">
+    <h2>RF04: Notificações</h2>
+    <ul>
+        <li>Enviar notificação no celular lembrando de devolver o livro.</li>
+        <li>Caso passe do dia de devolução, enviar notificações diárias.</li>
+        <li>Caso não devolva, registrar nota no histórico do aluno para próximas reservas.</li>
+    </ul>
+</div>
+
+<!-- RF05 -->
+<div class="bloco" id="rf05">
+    <h2>RF05: Devolução e Estado do Livro</h2>
+    <ul>
+        <li>Registrar devoluções atrasadas e não atrasadas.</li>
+        <li>Registrar o estado do livro (rasgado, faltando página, riscado, etc.).</li>
+        <li>Registrar se o usuário ultrapassou o prazo da devolução.</li>
+    </ul>
+</div>
+
+<!-- RNF01 -->
+<div class="bloco" id="rnf01">
+    <h2>RNF01: Aplicativo Móvel</h2>
+    <ul>
+        <li>Validar que o sistema seja funcional em dispositivos móveis.</li>
+        <li>Validar que funcione em qualquer dispositivo móvel.</li>
+    </ul>
+</div>
+
+<!-- RNF02 -->
+<div class="bloco" id="rnf02">
+    <h2>RNF02: Web</h2>
+    <ul>
+        <li>Validar que seja funcional em Web.</li>
+        <li>Validar que o site seja simples de usar e de fácil acesso.</li>
+    </ul>
+</div>
+
+<!-- RNF03 -->
+<div class="bloco" id="rnf03">
+    <h2>RNF03: Segurança</h2>
+    <ul>
+        <li>Garantir segurança aos usuários no acesso Web ou móvel.</li>
+        <li>Validar que manutenções sejam feitas a cada 2 semanas.</li>
+        <li>Disponibilizar caixa de aviso caso haja falha de segurança.</li>
+    </ul>
+</div>
+
+<!-- RNF04 -->
+<div class="bloco" id="rnf04">
+    <h2>RNF04: Disponibilidade</h2>
+    <ul>
+        <li>Garantir sistema online 24h por dia.</li>
+        <li>Avisar imediatamente caso o sistema caia.</li>
+        <li>Garantir que funcione mesmo fora do instituto IFAL.</li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Casos de Uso do Sistema de Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f0f2f5;
+        }
+        h1 {
+            background: #003366;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #003366;
+        }
+        .ator {
+            background: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 6px solid #003366;
+        }
+        a {
+            color: #003366;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Casos de Uso - Sistema de Biblioteca</h1>
+
+<p>Clique no nome do ator abaixo para visualizar seus casos de uso:</p>
+
+<ul>
+    <li><a href="#usuario">Usuário</a></li>
+    <li><a href="#aluno">Aluno</a></li>
+    <li><a href="#bibliotecario">Bibliotecário</a></li>
+    <li><a href="#professor">Professor</a></li>
+</ul>
+
+<div class="ator" id="usuario">
+    <h2>Ator: Usuário</h2>
+    <p><strong>Objetivo:</strong> Login (matrícula e senha).</p>
+    <p><strong>Relacionamento:</strong></p>
+    <ul>
+        <li><em>Include</em> — senha</li>
+        <li><em>Include</em> — matrícula</li>
+    </ul>
+</div>
+
+<div class="ator" id="aluno">
+    <h2>Ator: Aluno</h2>
+    <p><strong>Objetivo:</strong></p>
+    <ul>
+        <li>Pesquisar o acervo de livros (físicos e online)</li>
+        <li>Empréstimos de livros</li>
+        <li>Receber notificações lembrando da devolução</li>
+        <li>Realizar a devolução dos livros</li>
+    </ul>
+    <p><strong>Relacionamentos:</strong></p>
+    <ul>
+        <li><em>Include</em> — Empréstimos de livro 
+            (Aprovar o empréstimo de livros <strong>(bibliotecário)</strong>)
+        </li>
+        <li><em>Include</em> — Receber notificações de devolução 
+            (Enviar mensagens de lembrete, advertência e punições <strong>(bibliotecário)</strong>)
+        </li>
+    </ul>
+</div>
+
+<div class="ator" id="bibliotecario">
+    <h2>Ator: Bibliotecário</h2>
+    <p><strong>Objetivo:</strong></p>
+    <ul>
+        <li>Saber de todos os livros do acervo</li>
+        <li>Aprovar empréstimos de livros</li>
+        <li>Enviar mensagens de lembrete, advertência e punições</li>
+        <li>Registrar o estado do livro</li>
+    </ul>
+    <p><strong>Relacionamentos:</strong></p>
+    <ul>
+        <li><em>Include</em> — Registrar o estado do livro 
+            (avaliar o estado do livro devolvido)
+        </li>
+    </ul>
+</div>
+
+<div class="ator" id="professor">
+    <h2>Ator: Professor</h2>
+    <p><strong>Objetivo:</strong></p>
+    <ul>
+        <li>Sugerir e adicionar livros, audiobooks e podcasts</li>
+        <li>Utilizar livros durante a aula</li>
+    </ul>
+    <p><strong>Relacionamento:</strong></p>
+    <ul>
+        <li><em>Extend</em> — Sugerir e adicionar conteúdo 
+            (consultar acervo <strong>(bibliotecário)</strong>)
+        </li>
+        <li><em>Include</em> — Utilizar livros durante a aula 
+            (Aprovar empréstimos <strong>(bibliotecário)</strong>)
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
